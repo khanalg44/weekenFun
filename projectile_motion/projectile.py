@@ -59,20 +59,9 @@ def comp_animation(params):
     return my_ani
     #my_ani.save('anim.gif', writer='MovieWriter', fps=5)
 
-if __name__=="__main__":
-    
-    import time
-    time.sleep(1)
-
-    #-------input parameters--------
-    v0=10; theta=10; g=9.81
-    ################
-
-    params=[v0, theta]
-    #my_ani=comp_animation(params)
-
+def plot_with_angles(params):
+    v0,theta=params
     thetaL=[30, 60, 45]
-    
     plt.title('projectile motion at different angles', fontsize=14)
     for theta in thetaL:
         params=[v0, theta]
@@ -86,4 +75,19 @@ if __name__=="__main__":
     plt.ylabel("Height (m)", fontsize=14)
     plt.savefig('./figs/plot_with_angle.pdf')
     plt.show()
+
+
+if __name__=="__main__":
+    
+    import time
+    time.sleep(1)
+
+    #-------input parameters--------
+    v0=10; theta=10; g=9.81
+    ################
+
+    params=[v0, theta]
+    #my_ani=comp_animation(params)
+    plot_with_angles(params)
+
 
