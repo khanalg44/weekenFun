@@ -1,4 +1,4 @@
-# Some random fun warmup projects for the weekends.
+# Fun weekends Projects
 
 1. Binding Energy
 2. Projectile Motion
